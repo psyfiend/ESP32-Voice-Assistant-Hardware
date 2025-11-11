@@ -1,0 +1,16 @@
+# Ignore all folders named "demo" or "demos"
+**/demo/
+**/demos/
+**/1-Demo/
+
+# Ignore common compressed files and binaries
+*.zip
+*.rar
+*.7z
+*.bin
+*.exe
+
+# Ignore build/system files
+.vscode/
+build/
+.DS_Store
