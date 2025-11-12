@@ -1,6 +1,8 @@
 # Ignore all folders named "demo" or "demos"
 **/demo/
 **/demos/
+**/Demo/
+**/Demos/
 **/1-Demo/
 
 # Ignore common compressed files and binaries

@@ -1,0 +1,60 @@
+Waveshare Smart 86 Box - ESP32-S3-Touch-LCD-4B		(paid $44)
+	ESP32-S3 N16R8
+	4" 480x480 RGB
+	ST7701S/GT911
+	Power AXP2101 2mm battery
+	Mic x2 - 
+	ADC ES7201
+	DAC ES8311
+	Audio NS4150 1.25mm (onboard speaker)
+	QMI8658A 6 axis IMU
+	GPIO 2x10 2.0mm
+	
+Guition 3.5" - JC3248W535
+	ESP32S3 N16R8
+	3.5" 320x480 QSPI
+	AXS15231B
+	Power IP5306 1.25mm
+	Audio NS4168 1.25mm		Single mic
+	
+Guition 7" - JC1060P470C-IWY		(paid $43 shipped)
+	ESP32-P4 N32R16
+	7" 1024x600 MIPI DSI
+	JD9165/GT911
+	Power IP5306 1.25mm
+	Mic x1 - MSM381A3729H9CP
+	DAC ES8311
+	Audio NS4150 1.25mm
+	RS485 1.25mm
+	I2C 1mm
+	GPIO 2x13 2.54mm
+
+Guition 5" - JC8048W550			(paid $25)
+	ESP32-S3 N16R8
+	5" 800x480 RGB
+	ST7262/GT911
+	Mic x1
+	Audio NS4168 / MAX98357A
+	
+
+
+Guition 4.3" - JC4880443			$30 (case +$6))
+	ESP32-P4 N32R16
+	4.3" 480x800 MIPI DSI
+	ST7701S/GT911
+	Power IP5306 1.25mm
+	DAC ES8311
+	Mic x1
+	Audio NS4150 1.25mm
+	RS485 1.25mm
+	I2C 1mm
+	GPIO 2x13 2.54mm
+
+Waveshare 2.06" Amoled - ESP32-S3-Touch-AMOLED-2.06			$38 (Amazon)
+	ESP32-S3 N8R32
+	2.06" 410x502 Amoled QSPI
+	CO5300/FT3168
+	Power AXP2101	1.25
+	Mic x2
+	Codec ES7201
+	DAC ES8311
