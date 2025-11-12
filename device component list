@@ -11,11 +11,11 @@ Waveshare Smart 86 Box - ESP32-S3-Touch-LCD-4B		(paid $44)
 	GPIO 2x10 2.0mm
 	
 Guition 3.5" - JC3248W535
-	ESP32S3 N16R8
+	ESP32-S3 N16R8	(Sparkle IoT XH-34E)
 	3.5" 320x480 QSPI
 	AXS15231B
 	Power IP5306 1.25mm
-	Audio NS4168 1.25mm		Single mic
+	Audio NS4168 1.25mm	
 	
 Guition 7" - JC1060P470C-IWY		(paid $43 shipped)
 	ESP32-P4 N32R16
