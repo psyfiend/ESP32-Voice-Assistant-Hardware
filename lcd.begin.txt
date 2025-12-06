@@ -1,0 +1,64 @@
+DISPLAY_CYD_535
+&_lcd,
+LCD_AXS15231
+FLAGS_NONE
+40000000
+CS	45	CS			CSN(CS)
+SCK	47	CLK			SCL(CLK)
+D0	21	MOSI		DIN_SDA_DUAL(D0)
+D1	48	MISO		DIN_SDA(D1)
+D2	40	QA2/MCU-CS	VSYNC_QSPI_DIN2(D2)
+D3	39	QA2/MCUWR	DE_QSPI_DIN(D3)
+RST	-1
+BL	1
+DC	8
+
+i2c:
+  sda: 4
+  scl: 8
+  
+CS = 45
+CLK = 47
+D0/MOSI = 21
+D1/MISO = 48
+D2 = 40
+D3 = 39
+DC = 8
+TE = 38
+BL = 1
+
+lcd.begin(iType(iLCDType), iFlags,        iFreq,    CS,	DC,	RST, LED,	MISO -1, MOSI -1, CLK -1)
+
+lcd.begin(LCD_AXS15231,    FLAGS_NONE(0), 40000000, 45,	8,	-1,	 1,		48,		 21		, 47)
+
+ iStandardType = DISPLAY_CYD_535(41)
+ iFlags = FLAGS_NONE = 0
+ 
+		&_lcd		   LCD_AXS15231(31)		0		40000000		  45            47             21            48            40            39            -1             1
+qspiInit(SPILCD *pLCD, int iLCDType,	int iFLAGS, uint32_t u32Freq, uint8_t u8CS, uint8_t u8CLK, uint8_t u8D0, uint8_t u8D1, uint8_t u8D2, uint8_t u8D3, uint8_t u8RST, uint8_t u8LED);
+
+    // 2087
+    // spilcdInit(SPILCD *pLCD, int iType, int iFlags, int32_t iSPIFreq, int iCS, int iDC, int iReset, int iLED, int iMISOPin, int iMOSIPin, int iCLKPin, int bUseDMA)
+
+    // line 7472 - SPI bus initialized externally
+    // BB_SPI_LCD::begin(int iType, int iFlags, SPIClass *pExtSPI, int iCSPin, int iDCPin, int iResetPin, int iLEDPin)
+    // returns spilcdLinit() bUseDMA = 0
+    // lcd.begin(31, 0, 40000000, &SPI, 8, -1, 1);
+
+    // line 8224
+    // BB_SPI_LCD::begin(int iType, int iFlags, int iFreq, int iCSPin, int iDCPin, int iResetPin, int iLEDPin, int iMISOPin, int iMOSIPin, int iCLKPin)
+    // if iMISO -MOSI -CLKpin are -1, sets to MISO, MOSI, SCK
+    // returns: (following 1 is bUseDMA))
+    // spilcdInit(&_lcd, iType, iFlags, iFreq, iCSPin, iDCPin, iResetPin, iLEDPin, iMISOPin, iMOSIPin, iCLKPin,1);
+    
+    // 4761
+    // qspiInit(SPILCD *pLCD, int iLCDType, int iFLAGS, uint32_t u32Freq, uint8_t u8CS, uint8_t u8CLK, uint8_t u8D0, uint8_t u8D1, uint8_t u8D2, uint8_t u8D3, uint8_t u8RST, uint8_t u8LED)
+
+    // line 7478
+    // BB_SPI_LCD::beginQSPI(int iType, int iFlags, uint8_t CS_PIN, uint8_t CLK_PIN, uint8_t D0_PIN, uint8_t D1_PIN, uint8_t D2_PIN, uint8_t D3_PIN, uint8_t RST_PIN, uint32_t u32Freq)
+    // returns qspiInit
+    // lcd.beginQSPI(31, 0, 45, 47, 21, 48, 40, 39, -1, 40000000);
+
+    // line 8024 DISPLAY_CYD_535
+    // qspiInit(&_lcd, LCD_AXS15231, FLAGS_NONE, 40000000, 45,47,21,48,40,39,-1,1);
+    lcd.begin(31, 0, 40000000, 45, 8, -1, 1, 48, 21, 47);
